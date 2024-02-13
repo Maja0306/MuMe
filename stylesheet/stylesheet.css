@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  position: sticky;
+  top: 0;
+}
+
+header img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 12rem;
+  padding: 2rem 0 0 5rem;
+}
+
+nav {
+  margin: 3rem 20rem;
+  background-color: #FFF2F2;
+  height: 100px;
+  border-radius: 30px;
+  width: 70%;
+}
+
+.nav-list {
+  display: flex;
+  gap: 10rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.5rem;
+  padding-block: 2rem;
+}
+
+.active {
+  position: relative;
+  background-color: #FFE3E3;
+  padding: 1.3rem 2rem;
+  border-radius: 20px 20px 0 0;
+}
+
+.nav-list .active::before,
+.nav-list .active::after {
+  --border-radius: 2rem;
+  content: "";
+  position: absolute;
+  width: var(--border-radius);
+  height: var(--border-radius);
+  bottom: 0;
+  background: #FFF2F2;
+  border-radius: 50vw;
+}
+
+.nav-list .active::before {
+  right: calc(var(--border-radius) * -1);
+  border-radius: 0 0 0 100vw;
+  box-shadow: -5px 5px 0 5px #FFE3E3;
+}
+
+.nav-list .active::after {
+  left: calc(var(--border-radius) * -1);
+  border-radius: 0 0 100vw 0;
+  box-shadow: 5px 5px 0 5px #FFE3E3;
+}
+
+.nav-list a {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  display: grid;
+  min-height: 200vh;
+  background-color: #FFE3E3;
+}
+
+footer {
+  min-height: 100px;
+  background-color: rebeccapurple;
+}/*# sourceMappingURL=stylesheet.css.map */
