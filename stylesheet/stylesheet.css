@@ -13,6 +13,15 @@ body {
   min-height: 200vh;
 }
 
+.gif {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
 /* -- Indhold --
 -------Font
 ---Font size
@@ -27,19 +36,23 @@ body {
 -------Footer
 */
 /*------------Font--------------*/
-.nav-list, main {
+.nav-list, main, .kontaktform {
   font-size: 25px;
 }
 
-.nav-list {
+h1 {
+  font-size: 5rem;
+}
+
+.nav-list, h1 {
   font-family: "MuseoModerno", sans-serif;
 }
 
-p {
+p, .kontaktform {
   font-family: "Mukta", sans-serif;
 }
 
-main {
+main p {
   letter-spacing: 1px;
   line-height: 3rem;
 }
@@ -53,6 +66,14 @@ nav {
   background-color: #FFE3E3;
 }
 
+.second-bg {
+  background-color: #FCD8D8;
+}
+
+h1 {
+  color: #F71CBA;
+}
+
 /*------------Color--------------*/
 .nav-list a {
   color: black;
@@ -63,7 +84,7 @@ p {
 }
 
 /*------------Margin og padding--------------*/
-header, main p {
+header, main p, h1, .kontaktform {
   margin: 3rem 6rem;
 }
 
@@ -81,7 +102,7 @@ header img {
   top: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 8rem;
+  width: 7rem;
 }
 
 /*------------Navigation--------------*/
@@ -144,19 +165,25 @@ nav {
   box-shadow: 5px 5px 0 5px #FFE3E3;
 }
 
-/*------------Main--------------*/
+/*------------Main Index--------------*/
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 .scroll-reveal {
-  display: inline;
-  color: hsla(0, 0%, 0%, 0.2);
+  color: hsla(0, 0%, 0%, 0);
   width: 700px;
   -webkit-background-clip: text;
           background-clip: text;
   background-repeat: no-repeat;
-  background-size: 0% 100%;
-  background-image: linear-gradient(90deg, red, blue);
+  background-size: 100% 0%;
+  background-image: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
   animation: scroll-reveal linear forwards;
   animation-timeline: view();
-  animation-range: contain 200px;
+  animation-range-start: contain 10vh;
+  animation-range-end: contain 30vh;
+  margin-top: 4rem;
 }
 
 @keyframes scroll-reveal {
@@ -164,6 +191,63 @@ nav {
     background-size: 100% 100%;
   }
 }
+.second-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  position: relative;
+  top: -2rem;
+}
+
+.second-bg p {
+  width: 1000px;
+}
+
+/*------------Main Kontakt os--------------*/
+.kontaktform {
+  display: grid;
+}
+
+.kontaktform label {
+  color: red;
+}
+
+input[id=navn], input[id=virksomhed], input[id=mail], input[id=tel] {
+  border-radius: 30px;
+  width: 475px;
+  padding: 2rem;
+  margin: 1rem 0;
+  border: none;
+  background-color: #FBA3D0;
+}
+
+input[id=postnummer], input[id=by] {
+  border-radius: 30px;
+  width: 210px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: none;
+  background-color: #FBA3D0;
+}
+
+input[type=checkbox] {
+  border-radius: 50px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*------------Footer--------------*/
 footer {
   min-height: 200px;
