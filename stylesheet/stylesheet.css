@@ -4,82 +4,252 @@
   padding: 0;
 }
 
-header {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  position: sticky;
-  top: 0;
-}
-
-header img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 12rem;
-  padding: 2rem 0 0 5rem;
-}
-
-nav {
-  margin: 3rem 20rem;
-  background-color: #FFF2F2;
-  height: 100px;
-  border-radius: 30px;
-  width: 70%;
-}
-
-.nav-list {
-  display: flex;
-  gap: 10rem;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 1.5rem;
-  padding-block: 2rem;
-}
-
-.active {
-  position: relative;
-  background-color: #FFE3E3;
-  padding: 1.3rem 2rem;
-  border-radius: 20px 20px 0 0;
-}
-
-.nav-list .active::before,
-.nav-list .active::after {
-  --border-radius: 2rem;
-  content: "";
-  position: absolute;
-  width: var(--border-radius);
-  height: var(--border-radius);
-  bottom: 0;
-  background: #FFF2F2;
-  border-radius: 50vw;
-}
-
-.nav-list .active::before {
-  right: calc(var(--border-radius) * -1);
-  border-radius: 0 0 0 100vw;
-  box-shadow: -5px 5px 0 5px #FFE3E3;
-}
-
-.nav-list .active::after {
-  left: calc(var(--border-radius) * -1);
-  border-radius: 0 0 100vw 0;
-  box-shadow: 5px 5px 0 5px #FFE3E3;
-}
-
-.nav-list a {
-  color: black;
-  text-decoration: none;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   display: grid;
   min-height: 200vh;
+}
+
+.gif {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+/* -- Indhold --
+-------Font
+---Font size
+---Font family
+-------Colors 
+---Background color
+-------Margin & padding
+-------Header
+---Image
+---Navigation
+-------Main
+-------Footer
+*/
+/*------------Font--------------*/
+.nav-list, main, .kontaktform {
+  font-size: 25px;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.nav-list, h1 {
+  font-family: "MuseoModerno", sans-serif;
+}
+
+p, .kontaktform {
+  font-family: "Mukta", sans-serif;
+}
+
+main p {
+  letter-spacing: 1px;
+  line-height: 3rem;
+}
+
+/*------------Background color--------------*/
+nav {
+  background-color: #FFF2F2;
+}
+
+.active, body {
   background-color: #FFE3E3;
 }
 
+.second-bg {
+  background-color: #FCD8D8;
+}
+
+h1 {
+  color: #F71CBA;
+}
+
+/*------------Color--------------*/
+.nav-list a {
+  color: black;
+}
+
+p {
+  color: #151414;
+}
+
+/*------------Margin og padding--------------*/
+header, main p, h1, .kontaktform {
+  margin: 3rem 6rem;
+}
+
+/*------------Header--------------*/
+header {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  position: sticky;
+  top: 2rem;
+}
+
+header img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 7rem;
+}
+
+/*------------Navigation--------------*/
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 102px;
+  border-radius: 30px;
+  width: 1073px;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-block: 2rem;
+  font-weight: 300;
+}
+
+.nav-list a {
+  text-decoration: none;
+}
+
+.nav-list li {
+  padding: 1rem 2rem;
+}
+
+.active {
+  position: relative;
+  border-radius: 40px 40px 0 0;
+  padding: 1rem 1.3rem 2rem 1.3rem;
+  font-weight: 600;
+}
+
+/*Cirkler der fiktivt skaber en omvendt border-radius*/
+.active::before,
+.active::after {
+  --border-radius: 2rem;
+  content: "";
+  position: absolute;
+  width: var(--border-radius);
+  height: var(--border-radius);
+  bottom: 1px;
+  background: #FFF2F2;
+  border-radius: 50vw;
+}
+
+.active::before {
+  right: calc(var(--border-radius) * -1);
+  border-radius: 0 0 0 100vw;
+  box-shadow: -5px 5px 0 5px #FFE3E3;
+}
+
+.active::after {
+  left: calc(var(--border-radius) * -1);
+  border-radius: 0 0 100vw 0;
+  box-shadow: 5px 5px 0 5px #FFE3E3;
+}
+
+/*------------Main Index--------------*/
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.scroll-reveal {
+  color: hsla(0, 0%, 0%, 0);
+  width: 700px;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 100% 0%;
+  background-image: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+  animation-range-start: contain 10vh;
+  animation-range-end: contain 30vh;
+  margin-top: 4rem;
+}
+
+@keyframes scroll-reveal {
+  to {
+    background-size: 100% 100%;
+  }
+}
+.second-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  position: relative;
+  top: -2rem;
+}
+
+.second-bg p {
+  width: 1000px;
+}
+
+/*------------Main Kontakt os--------------*/
+.kontaktform {
+  display: grid;
+}
+
+.kontaktform label {
+  color: red;
+}
+
+input[id=navn], input[id=virksomhed], input[id=mail], input[id=tel] {
+  border-radius: 30px;
+  width: 475px;
+  padding: 2rem;
+  margin: 1rem 0;
+  border: none;
+  background-color: #FBA3D0;
+}
+
+input[id=postnummer], input[id=by] {
+  border-radius: 30px;
+  width: 210px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: none;
+  background-color: #FBA3D0;
+}
+
+input[type=checkbox] {
+  border-radius: 50px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*------------Footer--------------*/
 footer {
-  min-height: 100px;
+  min-height: 200px;
   background-color: rebeccapurple;
 }/*# sourceMappingURL=stylesheet.css.map */

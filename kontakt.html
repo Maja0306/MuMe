@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="stylesheet/stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -30,6 +34,59 @@
     </nav>
   </header>
   <main>
+    <h1>Kontakt os</h1>
+
+    <form class="kontaktform">
+      <div class="wrapper">
+        <div>
+          <label class="visually-hidden" for="navn">Navn</label>
+          <input id="navn" type="text" placeholder="Navn" required>
+        </div>
+        <div>
+          <label class="visually-hidden" for="virksomhed">Virksomhed</label>
+          <input id="virksomhed" type="text" placeholder="Virksomhed">
+        </div>
+        <div>
+          <label class="visually-hidden" for="mail">E-mail</label>
+          <input id="mail" type="email" placeholder="E-mail" required>
+        </div>
+        <div>
+          <label class="visually-hidden" for="tel">Telefon</label>
+          <input id="tel" type="tel" placeholder="Telefon" required>
+        </div>
+        
+        <div>
+          <label class="visually-hidden" for="postnummer">Postnummer</label>
+          <input id="postnummer" type="text" placeholder="Postnummer" required>
+
+          <label class="visually-hidden" for="by">By</label>
+          <input id="by" type="text" placeholder="By" required>
+        </div>
+
+        <div class="checkbox">
+          <legend>Hvordan ønsker I at blive kontaktet</legend>
+          <div>
+            <input type="checkbox" id="mail-box">
+            <label for="mail-box">E-mail</label>
+          </div>
+          <div>
+            <input type="checkbox" id="tel-box">
+            <label for="tel-box">Telefon</label>
+          </div>
+          <div>
+            <input type="checkbox" id="both">
+            <label for="both">Både mail og telefon er okay</label>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <label for="besked"></label>
+        <textarea id="besked" cols="30" rows="10"></textarea>
+      </div>
+
+      <input type="submit" name="submit" value="Send!">
+    </form>
+
 
   </main>
   <footer>
