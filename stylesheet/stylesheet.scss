@@ -35,6 +35,16 @@ body{
 -------Main
 -------Footer
 */
+/*------------Knapper--------------*/
+input[type=submit]{ 
+  background-color: blue;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-width: 100px; 
+}
 
 /*------------Font--------------*/
 .nav-list, main, .kontaktform{
@@ -174,8 +184,8 @@ main{
   background-image: linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
   animation: scroll-reveal linear forwards;
   animation-timeline: view();
-  animation-range-start: contain 10vh;
-  animation-range-end: contain 30vh;
+  /*animation-range-start: contain 10vh;
+  animation-range-end: contain 30vh;*/
   margin-top: 4rem; 
 }
 
@@ -200,39 +210,45 @@ main{
 /*------------Kontaktform--------------*/
 
 .kontaktform{
-  display: flex;
-}
-.wrapper{
-  display: grid;
+  display: flex; 
+  width: 100%;
+  font-size: 1em;
+  justify-content: center;
 }
 
 input[id=navn], input[id=virksomhed], input[id=mail], input[id=tel]{ 
   border-radius: 30px;
-  width: 50%;
+  width: 500px;
   padding: 2rem;
-  margin: 1rem 0;
+  margin: 0 0 2rem 0; 
   border: none; 
   background-color: #FBA3D0;
 }
 
 input[id=postnummer], input[id=by]{ 
   border-radius: 30px;
-  width: 50%;
+  width: 240px;
   padding: 2rem;
-  margin: 2rem 0;
+  margin: 1rem 1rem 3rem 0;
   border: none; 
   background-color: #FBA3D0;
-}
+} 
+
+textarea[id=besked]{ 
+  border-radius: 30px;
+  margin: 0 0 0 2rem; 
+  padding: 2rem;
+  border: none; 
+  background-color: #FBA3D0;
+} 
 
 input[type=submit]{
   width: 25%;
 }
-input[type=]:focus{
-  background-color: red;
-}
 
 input::placeholder{
-  color: black;
+  color: rgb(40, 40, 40);
+  font-size: 1em;
 } 
 
 .visually-hidden {
