@@ -15,7 +15,7 @@
       <img src="img/Group 12.png" alt="logo">
       <nav>
         <ul class="nav-list">
-          <li class="active"> <!--Kun nødvendig, så det fungere på ældre browsere-->
+          <li class="active">
             <a href="index.html" aria-current="page">Hjem</a> <!--aria-current="page" gør siden mere tilgængelig-->
           </li>
           <li>
@@ -39,9 +39,125 @@
       Et kreativt og nytænkende multimediebureau med øje for detaljen og kundens ønsker i højsæde. Kig løs på vores hjemmeside og tøv endelig ikke med at kontakte os for en uforpligtende samtale.
     </p>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319"><path fill="#FCD8D8" fill-opacity="1" d="M0,256L60,250.7C120,245,240,235,360,240C480,245,600,267,720,240C840,213,960,139,1080,112C1200,85,1320,107,1380,117.3L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg> 
-    <div class="second-bg ">
-      <h1>Hvem er vi?</h1>
-      <p>Vi er tre uddannede multimediedesignere med en kreativ, nytænkende og engageret tilgang til webdesign, som ønsker at skabe hjemmesider efter jeres ønsker og som passer til jeres virksomhed samt det udtryk og image, som I ønsker er bibeholde eller skabe...</p>
+    <div class="second-bg">
+      <div class="wrapper">
+        <h1>Hvem er vi?</h1>
+        <p>Vi er tre uddannede multimediedesignere med en kreativ, nytænkende og engageret tilgang til webdesign, som ønsker at skabe hjemmesider efter jeres ønsker og som passer til jeres virksomhed samt det udtryk og image, som I ønsker er bibeholde eller skabe...</p>
+        <div class="knap">
+          <p>Læs mere her</p>
+        </div>
+      </div>
+      <img class="landscape" src="img/landscape-3.webp" alt="">
+      <img class="landscape" src="img/landscape-2.jpeg" alt="">
+      <img class="landscape" src="img/landscape-1.png" alt=""> 
+    </div>
+    <p class="stroke-tekst">Designed by you, inspired by you</p> 
+    <h2>Vores cases</h2>
+    <div class="overflow-scroll">
+      <div class="scroll-forside"> 
+        <div>
+          <img class="scroll-img" src="img/landscape-1.png" alt="">
+          <div tekst-baggrund>
+            <p>Creative space</p>
+          </div>
+        </div>
+        <div>
+          <img class="scroll-img" src="img/landscape-1.png" alt="">
+          <div tekst-baggrund>
+            <p>Creative space</p>
+          </div>
+        </div>
+        <div>
+          <img class="scroll-img" src="img/landscape-1.png" alt="">
+          <div tekst-baggrund>
+            <p>Creative space</p>
+          </div>
+        </div>
+        <div>
+          <img class="scroll-img" src="img/landscape-1.png" alt="">
+          <div tekst-baggrund>
+            <p>Creative space</p>
+          </div>
+        </div>
+        <div>
+          <img class="scroll-img" src="img/landscape-1.png" alt="">
+          <div tekst-baggrund>
+            <p>Creative space</p>
+          </div>
+        </div>
+        <div>
+          <img class="scroll-img" src="img/landscape-1.png" alt="">
+          <div tekst-baggrund>
+            <p>Creative space</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="knap centreret">
+      <p>Se alle her</p>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319"><path fill="#FCD8D8" fill-opacity="1" d="M0,256L60,250.7C120,245,240,235,360,240C480,245,600,267,720,240C840,213,960,139,1080,112C1200,85,1320,107,1380,117.3L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg> 
+    <div class="second-bg">
+      <h2>Kontakt os her</h2>
+      <form class="kontaktform">
+        <div class="flex">
+          <div class="wrapper-kontaktform"> 
+            <div>
+              <label class="visually-hidden" for="navn">Navn</label>
+              <input id="navn" type="text" placeholder="Navn" required>
+            </div>
+            <div>
+              <label class="visually-hidden" for="virksomhed">Virksomhed</label>
+              <input id="virksomhed" type="text" placeholder="Virksomhed">
+            </div>
+            <div>
+              <label class="visually-hidden" for="mail">E-mail</label>
+              <input id="mail" type="email" placeholder="E-mail" required>
+            </div>
+            <div>
+              <label class="visually-hidden" for="tel">Telefon</label>
+              <input id="tel" type="tel" placeholder="Telefon" required>
+            </div>
+            
+            <div>
+              <label class="visually-hidden" for="postnummer">Postnummer</label>
+              <input id="postnummer" type="text" placeholder="Postnummer" required>
+    
+              <label class="visually-hidden" for="by">By</label>
+              <input id="by" type="text" placeholder="By" required>
+            </div>
+          </div>
+          <div class="wrapper-kontaktform">
+            <label class="visually-hidden" for="besked"></label>
+            <textarea id="besked" cols="30" rows="7" placeholder="Skriv gerne en kort beskrivelse af jeres ønsker..."></textarea>
+            <div class="checkbox">
+              <legend>Hvordan ønsker I at blive kontaktet</legend>
+              <div>
+                <label class="checkbox2" for="checkbox">
+                  <input checked class="checkbox-input" type="checkbox" name="nyCheckbox" id="checkbox">
+                  <div class="checkbox-box"></div>
+                  Telefon
+                </label>
+              </div>
+              <div>
+                <label class="checkbox2" for="checkbox2">
+                  <input checked class="checkbox-input" type="checkbox" name="nyCheckbox2" id="checkbox2">
+                  <div class="checkbox-box"></div> 
+                  E-mail
+                </label>
+              </div>
+              <div>
+                <label class="checkbox2" for="checkbox3">
+                  <input class="checkbox-input" type="checkbox" name="nyCheckbox3" id="checkbox3">
+                  <div class="checkbox-box"></div>
+                  Både telefon og E-mail
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <input type="submit" name="submit" value="Send!">
+      </form>
     </div>
   </main>
   <footer>
