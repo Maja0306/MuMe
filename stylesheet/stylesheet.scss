@@ -1,3 +1,5 @@
+@import "partial";
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -9,55 +11,18 @@ body{
   min-height: 200vh;
 }
 
-.gif{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 800px; 
-  justify-content: center;
-  padding-top: 4rem; 
-}
-
-/* -- Indhold --
--------Font
----Font size
----Font family
--------Colors 
----Background color
--------Margin & padding
--------Header
----Image
----Navigation
--------Main
--------Footer
-*/
-
 /*------------Knapper--------------*/
 input[type=submit], .knap{ 
-  background-color: blue;
-  border-radius: 60px;
-  border: none;
-  color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  cursor: pointer;
-  max-height: 100px; 
-  max-width: 250px; 
+  @include knap;
 }
 
-.knap p{
-  color: white;
-  margin: 0; 
-  justify-content: center;
-  text-align: center; 
-  padding: 1rem;
-} 
-.centreret{
-  margin: auto; 
+/*------------Gennerelt text styling--------------*/
+
+.nav-list, main{ 
+  font-size: 25px; 
 }
 
-/*------------Gennerelt styling--------------*/
-
-h1{
+h1, .value-words p{
   text-align: center; 
   font-size: 5rem;
   font-family: "MuseoModerno", sans-serif;
@@ -67,58 +32,56 @@ h2{
   font-size: 3rem;
   font-family: "MuseoModerno", sans-serif;
 }
-.tekst-center{
-  margin: 0 18vw 2rem 18vw;
-}
-
-/*------------Font--------------*/
-.nav-list, main, .kontaktform, input[type=submit], textarea[id=besked]{
-  font-size: 25px; 
-}
-
-h1, .value-words p{
-  font-size: 5rem; 
+p{
+  font-family: "Mukta", sans-serif;
+  letter-spacing: 1px; 
+  line-height: 3rem;
 }
 
 .nav-list, .value-words p{
   font-family: "MuseoModerno", sans-serif; 
 } 
 
-p, .kontaktform, input[type=submit], textarea[id=besked]{
+.kontaktform, input[type=submit], textarea[id=besked]{
   font-family: "Mukta", sans-serif;
 }
 
-main p{
-  letter-spacing: 1px; 
-  line-height: 3rem;
+.tekst-center{
+  margin: 0 18vw 2rem 18vw;
+}
+/*-----------Index----------*/
+
+.gif{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px; 
+  justify-content: center;
+  padding-top: 4rem; 
 }
 
 /*------------Background color--------------*/
 nav{
-  background-color: #FFF2F2;
+  background-color: $pink-header;
 }
 .active, body {
-  background-color: #FFE3E3;
+  background-color: $bg-color;
 }
 
 .second-bg{
-  background-color: #FCD8D8;
+  background-color: $second-bg-color;
 }
 
 /*------------Color--------------*/
-.nav-list a{
-  color: #F71CBA; 
+.nav-list a, h1, h2{
+  color: $pink; 
 }
 p{
-  color: #151414;
-}
-
-h1, h2{ 
-  color: #F71CBA;
+  color: $black;
 }
 
 .active{
-  color: #373FF7;
+  color: $blue;
 }
 
 /*------------Margin og padding--------------*/
@@ -142,7 +105,7 @@ header img{
   object-fit: cover;
   width: 7rem; 
 }
-/*------------Navigation--------------*/
+
 nav{
   position: absolute;
   top: 0; 
@@ -160,14 +123,12 @@ nav{
   list-style: none;
   padding-block: 2rem; 
   font-weight: 300; 
-} 
-
-.nav-list a{
-  text-decoration: none;
-}
-
-.nav-list li{
-  padding: 1rem 2rem;
+  a{
+    text-decoration: none;
+  }
+  li{
+    padding: 1rem 2rem;
+  }
 }
 
 .active {
@@ -186,26 +147,27 @@ nav{
   width: var(--border-radius);
   height: var(--border-radius);
   bottom: 1px;
-  background: #FFF2F2;
+  background: $pink-header;
   border-radius: 50vw; 
 } 
 
 .active::before{
   right: calc(var(--border-radius) * -1);
   border-radius: 0 0 0 100vw;
-  box-shadow: -5px 5px 0 5px #FFE3E3;
+  box-shadow: -5px 5px 0 5px $bg-color;
 }
 
 .active::after{
   left: calc(var(--border-radius) * -1);
   border-radius: 0 0 100vw 0;
-  box-shadow: 5px 5px 0 5px #FFE3E3;
+  box-shadow: 5px 5px 0 5px $bg-color;
 }
 /*------------Main Index--------------*/
 main{
   display: flex;
   flex-direction: column; 
 }
+/*
 .scroll-reveal{
   color: hsla(0, 0%, 0%, 0); 
   width: 700px;
@@ -218,7 +180,7 @@ main{
   animation-range-start: contain 10vh;
   animation-range-end: contain 30vh;
   margin-top: 4rem; 
-}
+}*/
 
 @keyframes scroll-reveal{
   to { 
@@ -231,7 +193,6 @@ main{
 }
 .wrapper{
   justify-self: right; 
-  align-items: end; 
   position: relative;
   top: -2rem;
   width: 1000px;
@@ -244,7 +205,7 @@ main{
 }
 .stroke-tekst{
   color: transparent; 
-  -webkit-text-stroke: 1px #373FF7; 
+  -webkit-text-stroke: 1px $blue; 
   font-size: 5rem; 
   text-align: center;
   margin-bottom: 10rem; 
@@ -255,7 +216,12 @@ main{
   object-fit: cover; 
   border-radius: 30px; 
 } 
-.scroll-forside p{
+
+.scroll-forside{
+ display: flex;
+ gap: 40px;
+ overflow-x: auto;
+ p{
   position: relative;
   bottom: 15rem;
   padding: 2rem 0; 
@@ -263,35 +229,31 @@ main{
   margin: auto; 
   background-color: rgb(252, 216, 216, 0.75);
   text-align: center;
-
- } 
-.scroll-forside{
- display: flex;
- gap: 40px;
- overflow-x: auto;
+ }
 } 
 .overflow-scroll{
   max-width: 80%;  
   width: 85vw;
   margin: auto;
   padding: 1rem; 
-  color: white;
+  color: $white;
   height: auto;
 }
 /*------------Main om os--------------*/
 .value-words{
   margin: 10rem 0 30rem 0;
+  p{
+    width: 20vw; 
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
 } 
-.value-words p{
-  width: 20vw; 
-  margin: 0 auto;
-  padding: 3rem 0;
-}
+
 .value-words p:nth-of-type(1){
-  color: #F71CBA;
+  color: $pink;
 }
 .value-words p:nth-of-type(2){
-  color: #373FF7; 
+  color: $blue; 
 }
 .rund-billede{
   border-radius: 500px;
@@ -309,105 +271,19 @@ main{
   margin: 0 auto;
   gap: 10vw; 
   padding: 3rem 0; 
-  background-color: #F71CBA;  
+  background-color: $pink;  
+  div{
+    width: 20vw;
+  }
+  p{
+    text-align: center;
+  }
 }
-.portraet div{
-  width: 20vw;
-}
-.portraet p{
-  text-align: center; 
-}
+
 /*------------Kontaktform--------------*/
 
-.flex{
-  display: flex; 
-  width: 100%;
-  font-size: 1em;
-  justify-content: center;
-}
-
-input[id=navn], input[id=virksomhed], input[id=mail], input[id=tel]{ 
-  border-radius: 30px;
-  width: 500px;
-  padding: 2rem;
-  margin: 0 0 2rem 0; 
-  border: none; 
-  background-color: #FBA3D0;
-}
-
-input[id=postnummer], input[id=by]{ 
-  border-radius: 30px;
-  width: 240px;
-  padding: 2rem;
-  margin: 1rem 1rem 3rem 0;
-  border: none;
-  background-color: #FBA3D0;
-} 
-textarea[id=besked]{ 
-  border-radius: 30px;
-  margin: 0 0 0 2rem;
-  padding: 2rem;
-  border: none;
-  background-color: #FBA3D0;
-} 
-input[type=submit]{
-  display: block;
-  margin: 0 auto; 
-  padding: 2rem 6rem; 
-}
-input[type=checkbox], legend{
-  margin: 0 2rem;
-}
-input::placeholder{
-  color: rgb(40, 40, 40);
-  font-size: 1em;
-} 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-.checkbox2{
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-}
-.checkbox-input{
-  display: none;
-}
-.checkbox-box{
-  width: 1.25em;
-  height: 1.25em;
-  border: solid 2.5px #FBA3D0;
-  background-color: transparent;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-  margin-left: 30px;
-  flex-shrink: 0; 
-  transition: background-color 0.2s, border-color 0.2s;
-}
-.checkbox-box::after{
-  content: '\2714';
-  color: #373FF7;
-  transform: scale(0);
-  transition: transform 0.2s;
-}
-.checkbox-input:checked + .checkbox-box{
-  background-color: #FBA3D0;
-  border-color: #FBA3D0;
-}
-.checkbox-input:checked + .checkbox-box::after{
-  transform: scale(1.5);
+.kontaktform{
+  @include form;
 }
 
 /*------------Footer--------------*/
