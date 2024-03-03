@@ -1,0 +1,65 @@
+/*-------------------Knap------------------*/
+/*-------------------Kontaktform------------------*/
+@media screen and (max-width: 1450px) {
+  .header-logo {
+    display: none;
+  }
+}
+@media screen and (max-width: 1250px) {
+  /*-----Knapper-----*/
+  .left {
+    justify-content: center;
+    align-items: center;
+  }
+  .right {
+    justify-content: center;
+    align-items: center;
+  }
+  /*-----Header-----*/
+  header {
+    grid-template-columns: 100vw;
+    max-width: 90vw;
+  }
+  .nav-comp {
+    display: none;
+  }
+  .nav-tel {
+    display: none;
+  }
+  /*-----Index-----*/
+  .wrapper {
+    width: 100vw;
+    padding: 2rem;
+  }
+  .scroll-reveal {
+    width: 100vw;
+  }
+  /*-----Services------*/
+  .services {
+    display: flex;
+    flex-direction: column;
+  }
+  .services-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .services-reverse h2 {
+    text-align: left;
+  }
+  .services-reverse p:nth-child(even) {
+    text-align: left;
+    margin: 2rem 0;
+  }
+  .card-img-services {
+    max-width: 80vw;
+    height: 80vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+  }
+  /*--------Priser----------*/
+  .pris-boks {
+    max-width: 90vw;
+  }
+  /*---------Kontakt os-----------*/
+}/*# sourceMappingURL=stylesheet-tel.css.map */

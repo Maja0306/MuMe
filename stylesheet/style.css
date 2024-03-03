@@ -9,10 +9,11 @@
 
 body {
   display: grid;
+  min-height: 200vh;
 }
 
 html {
-  font-size: 22px;
+  font-size: 25px;
 }
 
 /*------------Knapper--------------*/
@@ -64,17 +65,13 @@ input[type=submit] p {
 }
 
 /*------------Gennerelt text styling--------------*/
-svg {
-  width: 100vw;
-}
-
 .nav-list, main {
-  font-size: 25px;
+  font-size: 1rem;
 }
 
 h1, .value-words p {
   text-align: center;
-  font-size: 4rem;
+  font-size: 5rem;
   font-family: "MuseoModerno", sans-serif;
 }
 
@@ -84,14 +81,14 @@ h1 {
 
 h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: "MuseoModerno", sans-serif;
 }
 
 p {
   font-family: "Mukta", sans-serif;
   letter-spacing: 1px;
-  line-height: 2rem;
+  line-height: 3rem;
 }
 
 .nav-list, .value-words p {
@@ -112,6 +109,15 @@ p {
 }
 .tekst-wrapper p {
   margin-bottom: 2rem;
+}
+
+/*-----------Index----------*/
+.gif {
+  display: block;
+  margin: 0 auto;
+  width: 70vw;
+  justify-content: center;
+  padding-top: 6rem;
 }
 
 /*------------Background color--------------*/
@@ -142,7 +148,7 @@ p {
 
 /*------------Margin og padding--------------*/
 header, .scroll-reveal, h1, .kontaktform {
-  margin: 2rem 4rem;
+  margin: 3rem 6rem;
 }
 
 /*------------Header--------------*/
@@ -159,7 +165,7 @@ header .header-logo {
   top: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 116px;
+  width: 7rem;
 }
 
 .nav-comp {
@@ -179,18 +185,18 @@ header .header-logo {
   width: 90vw;
   border-radius: 30px;
   background-color: #FFF6F6;
-  padding: 2vw 4vw;
+  padding: 2rem 4rem;
 }
 .nav-tel div img {
   margin: 0 auto;
-  width: 20vw;
+  width: 14rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
 .nav-tel div i {
-  position: relative;
-  right: 0;
-  font-size: 6vw;
+  position: absolute;
+  right: 4rem;
+  font-size: 4rem;
   color: #373FF7;
 }
 
@@ -203,27 +209,27 @@ ul {
   justify-content: space-evenly;
   margin: 0;
   padding: 0;
-  padding-block: 32px;
+  padding-block: 2rem;
   font-weight: 300;
 }
 .nav-list a {
   text-decoration: none;
 }
 .nav-list li {
-  padding: 16px 32px;
+  padding: 1rem 2rem;
 }
 
 .active {
   position: relative;
   border-radius: 40px 40px 0 0;
-  padding: 16px 20.8px 32px 20.8px;
+  padding: 1rem 1.3rem 2rem 1.3rem;
   font-weight: 600;
 }
 
 /*Cirkler der fiktivt skaber en omvendt border-radius*/
 .active::before,
 .active::after {
-  --border-radius: 32px;
+  --border-radius: 2rem;
   content: "";
   position: absolute;
   width: var(--border-radius);
@@ -251,17 +257,9 @@ main {
   flex-direction: column;
 }
 
-.gif {
-  display: block;
-  margin: 0 auto;
-  width: 70vw;
-  justify-content: center;
-  padding-top: 6vw;
-}
-
 .scroll-reveal {
   color: hsla(0, 0%, 0%, 0.109);
-  width: 40vw;
+  width: 700px;
   -webkit-background-clip: text;
           background-clip: text;
   background-repeat: no-repeat;
@@ -287,47 +285,21 @@ main {
   justify-self: right;
   position: relative;
   top: -2rem;
-  width: 60vw;
+  width: 70vw;
   margin-right: 2rem;
 }
 
-.test {
-  margin: 0;
-  padding: 0;
-}
-
-.box1, .box2, .box3 {
-  height: 65vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  display: table;
-  background-attachment: fixed;
-  -webkit-backdrop-filter: brightness(0);
-          backdrop-filter: brightness(0);
-}
-.box1 h2, .box2 h2, .box3 h2 {
-  display: table-cell;
-  vertical-align: middle;
-  color: #ffffff;
-}
-
-.box1 {
-  background-image: url(/img/para4.jpeg);
-}
-
-.box2 {
-  background-image: url(/img/para2.jpeg);
-}
-
-.box3 {
-  background-image: url(/img/landscape-1.png);
+.landscape {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 800px;
 }
 
 .stroke-tekst {
   color: transparent;
   -webkit-text-stroke: 1px #373FF7;
-  font-size: 5vw;
+  font-size: 5rem;
   text-align: center;
   margin-bottom: 10rem;
   margin-top: 2rem;
@@ -358,9 +330,9 @@ main {
 }
 
 .overflow-scroll {
-  max-width: 80vw;
+  max-width: 80%;
   width: 85vw;
-  margin: 0 auto;
+  margin: auto;
   padding-top: 3rem;
   color: #ffffff;
   height: auto;
@@ -595,22 +567,9 @@ main {
   transform: scale(1.5);
 }
 
-/*-----------Priser-----------*/
-.pris-boks {
-  width: 60vw;
-  background-color: #FBA3D0;
-  border-radius: 30px;
-  margin: 2rem auto;
-  padding: 4rem;
-}
-.pris-boks p {
-  margin: 2rem 0;
-  text-align: center;
-}
-
 /*------------Footer--------------*/
 footer {
   min-height: 200px;
   background-color: #FFF6F6;
   width: 100vw;
-}/*# sourceMappingURL=stylesheet.css.map */
+}/*# sourceMappingURL=style.css.map */
