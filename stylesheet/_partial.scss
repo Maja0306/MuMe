@@ -44,17 +44,11 @@ $border-radius: 60px;
 }
 
 /*-------------------Kontaktform------------------*/
-@mixin form{
-  .flex{
-    display: flex;
-    max-width: 100vw;
-    font-size: 1rem;
-    justify-content: center;
-  }
+@mixin form {
   
   input[id=navn], input[id=virksomhed], input[id=mail], input[id=tel]{ 
     border-radius: $border-radius;
-    width: 500px;
+    width: 30vw;
     padding: 1.5rem;
     margin: 0 0 1rem 0; 
     border: none; 
@@ -64,25 +58,27 @@ $border-radius: 60px;
   
   input[id=postnummer], input[id=by]{ 
     border-radius: $border-radius;
-    width: 240px;
+    width: 14.5vw;
     padding: 1.5rem;
-    margin: 0 1rem 3rem 0;
+    margin: 0 1vw 3rem 0;
     border: none;
     background-color: $pink-second;
     font-size: 1rem;
   } 
   textarea[id=besked]{ 
     border-radius: $border-radius;
-    margin: 0 0 0 1.5rem;
+    margin: 0 0 1vw 1vw;
     padding: 1.5rem;
     border: none;
     background-color: $pink-second;
     font-size: 1rem;
+    width: 30vw;
+    height: 15rem; 
   } 
   input[type=submit]{
     display: block;
     margin: 0 auto; 
-    padding: 1.5rem 8rem; 
+    padding: 1.5rem 6rem; 
     font-size: 1rem; 
   }
   input[type=checkbox], legend{
@@ -140,4 +136,33 @@ $border-radius: 60px;
   .checkbox-input:checked + .checkbox-box::after{
     transform: scale(1.5);
   }
+
+  @media screen and (max-width: 1250px) {
+    input[id=navn], input[id=virksomhed], input[id=mail], input[id=tel]{ 
+      width: 80vw;
+    }
+    
+    input[id=postnummer], input[id=by]{ 
+      width: 39vw;
+    } 
+    input[id=by]{ 
+      margin: 0;
+    } 
+    textarea[id=besked]{ 
+      width: 80vw;
+      height: 15rem; 
+      margin: 0; 
+    }
+    
+  }
 }
+
+/*  input[id=postnummer], input[id=by]{ 
+    border-radius: $border-radius;
+    width: 14.5vw;
+    padding: 1.5rem;
+    margin: 0 1vw 3rem 0;
+    border: none;
+    background-color: $pink-second;
+    font-size: 1rem;
+  } */
