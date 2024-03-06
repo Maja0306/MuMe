@@ -23,18 +23,30 @@
     align-items: center;
   }
   /*-----Header-----*/
-  header{
-    grid-template-columns: 100vw; 
-    max-width: 90vw; 
-    margin: 0; 
-
-  }
   .nav-comp{
-    display: none;
+    width: 85vw;
+    border-radius: $border-radius/3;
   }
-  .nav-tel{
-    display: block; 
+  .nav-list{
+    li{
+      padding: 16px 2vw;
+    }
   }
+  .active{
+    border-radius: 3vw 3vw 0 0;
+  }
+.active::before, 
+.active::after{
+  --border-radius: 17px; 
+} 
+
+.active::before{
+  border-radius: 0 0 0 $border-radius/3;
+}
+
+.active::after{
+  border-radius: 0 0 $border-radius/3 0;
+}
 
   /*-----Index-----*/
   .gif{
@@ -84,6 +96,21 @@
     object-fit: cover; 
     border-radius: 30px; 
   } 
+  .cases-wrapper{
+    display: grid; 
+    padding-bottom: 0; 
+    margin: auto;
+    width: 70vw;
+  }
+  .card-wrapper{
+    max-width: 100vw;
+    img{
+      width: 70vw;
+    }
+  }
+  .cases-ned{
+    position: static;
+  }
   /*--------Priser----------*/
   .pris-boks{
     max-width: 90vw;
@@ -96,6 +123,20 @@
     display: flex;
     flex-direction: column; 
     margin: 10vw;
+  }
+  .ikke-overbevist{
+    max-width: 95vw;
+  }
+  /*---------Om os-----------*/
+  .portraet{
+    display: grid;
+    div{
+      max-width: 100vw;
+    }
+  }
+  .rund-billede{
+    max-width: 30vw;
+    height: 30vw;
   }
   /*--------Footer----------*/
   footer{
@@ -129,10 +170,23 @@
     font-size: 6vw;
   }
   /*------Header-------*/
+  header{
+    grid-template-columns: 100vw; 
+    max-width: 90vw; 
+    margin: 0; 
+    position: sticky;
+    top: 3vw; 
+  }
   .nav-tel{
     div{
       padding: 4vw 4vw;
     }
+  }
+  .nav-comp{
+    display: none;
+  }
+  .nav-tel{
+    display: block; 
   }
 
   /*------Index-------*/
@@ -187,17 +241,6 @@
     h2{
       text-align: center;
     }
-  }
-  .cases-wrapper{
-    display: grid; 
-    padding-bottom: 0; 
-  }
-  .card-wrapper{
-    max-width: 100vw;
-    padding: 5vw 10vw;
-  }
-  .cases-ned{
-    position: static;
   }
 
   /*-------Priser--------*/

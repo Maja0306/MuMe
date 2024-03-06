@@ -43,6 +43,12 @@ html {
   color: #ffffff;
   font-size: 1rem;
 }
+.knap a {
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-family: "Mukta", sans-serif;
+}
 
 input[type=submit] {
   background-color: #373FF7;
