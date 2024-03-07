@@ -327,14 +327,13 @@ main {
   background-size: cover;
   background-position: center;
   display: table;
+  background-attachment: fixed;
 }
 .box1 h2, .box2 h2, .box3 h2 {
   display: table-cell;
   vertical-align: middle;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(3px) brightness(0.5) contrast(80%);
-          backdrop-filter: blur(3px) brightness(0.5) contrast(80%);
 }
 
 .box1 {
