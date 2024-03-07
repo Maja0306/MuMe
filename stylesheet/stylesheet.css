@@ -339,15 +339,15 @@ main {
 }
 
 .box1 {
-  background: url("../img/sidste-forside.png");
+  background-image: url("../img/sidste-forside.png");
 }
 
 .box2 {
-  background: url("../img/andet-forside.png");
+  background-image: url("../img/andet-forside.png");
 }
 
 .box3 {
-  background: url("../img/kode.png");
+  background-image: url("../img/kode.png");
 }
 
 .stroke-absolut {
