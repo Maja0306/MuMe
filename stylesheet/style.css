@@ -77,6 +77,9 @@ input[type=submit] {
 input[type=submit] p {
   color: #ffffff;
 }
+input[type=submit] :hover {
+  animation: bottomsColor 100s ease alternate;
+}
 
 .center {
   justify-content: center;
@@ -525,12 +528,14 @@ main {
   font-size: 1rem;
   width: 30vw;
   height: 15rem;
+  font-family: "Mukta", sans-serif;
 }
 .kontaktform input[type=submit] {
   display: block;
   margin: 0 auto;
   padding: 1.5rem 6rem;
   font-size: 1rem;
+  font-family: "Mukta", sans-serif;
 }
 .kontaktform input[type=checkbox], .kontaktform legend {
   margin: 0 2rem;

@@ -8,6 +8,7 @@
 
 body{
   display: grid;
+  background-color: $bg-color;
 }
 html{
   font-size: 22px;
@@ -34,26 +35,20 @@ input[type=submit]{
   align-items: right; 
 }
 
-/*------------Gennerelt text styling--------------*/
-
+/*--------Gennerelt text styling---------*/
 svg{
   width: 100vw;
 }
-.nav-list, main{ 
+main{ 
   font-size: 25px; 
 }
-
 h1{
   text-align: center; 
   font-size: 5vw;
   font-family: "MuseoModerno", sans-serif;
-}
-h3{
-  font-family: "MuseoModerno", sans-serif;
-}
-h1{
   padding-top: 4vw;
   margin-bottom: 2vw;
+  color: $pink;
 }
 .h1-top{
   padding-top: 7vw;
@@ -62,28 +57,23 @@ h2{
   text-align: center; 
   font-size: 3.5vw;
   font-family: "MuseoModerno", sans-serif;
+  color: $pink;
 
+}
+h3{
+  font-family: "MuseoModerno", sans-serif;
 }
 p{
   font-family: "Mukta", sans-serif;
   letter-spacing: 1px; 
   line-height: 2rem;
+  color: $black;
 }
-
-.nav-list, .value-words p{
-  font-family: "MuseoModerno", sans-serif; 
-} 
-
-.kontaktform, input[type=submit], textarea[id=besked]{
-  font-family: "Mukta", sans-serif;
-} 
-
 .center-p{
   text-align: center;
   margin-top: 1rem; 
   max-width: 100vw;
 }
-
 .tekst-wrapper{
   padding: 2rem 18vw;
   p{
@@ -97,37 +87,9 @@ p{
     font-weight: 600;
   }
 }
-
-/*------------Background color--------------*/
-.nav-comp{
-  background-color: $pink-header;
-}
-.active, body {
-  background-color: $bg-color;
-}
-
 .second-bg{
   background-color: $second-bg-color;
 }
-
-
-/*------------Color--------------*/
-.nav-list a, h1, h2{
-  color: $pink; 
-}
-p{
-  color: $black;
-}
-
-.active{
-  color: $blue;
-}
-
-/*------------Margin og padding--------------*/
-header {
-  margin: 2rem 4rem;
-}
-
 
 /*------------Header--------------*/
 header{
@@ -135,6 +97,7 @@ header{
   grid-template-columns: 1fr 5fr; 
   position: relative;
   z-index: 2;
+  margin: 2rem 4rem;
   .header-logo{
   position: absolute;
   left: 0;
@@ -175,6 +138,7 @@ header{
   height: 102px;
   border-radius: $border-radius/2;
   width: 1073px;
+  background-color: $pink-header;
 }
 ul{
   list-style: none;
@@ -187,8 +151,11 @@ ul{
   padding: 0;
   padding-block: 32px; 
   font-weight: 300; 
+  font-size: 25px;
+  font-family: "MuseoModerno", sans-serif;
   a{
     text-decoration: none;
+    color: $pink;
   }
   li{
     padding: 16px 32px;
@@ -200,6 +167,8 @@ ul{
   border-radius: 40px 40px 0 0;
   padding: 16px 20.8px 32px 20.8px;
   font-weight: 600; 
+  color: $blue;
+  background-color: $bg-color;
 }
 
 /*Cirkler der fiktivt skaber en omvendt border-radius*/
@@ -233,7 +202,7 @@ main{
 .gif{
   display: block;
   margin: 0 auto;
-  max-width: 60vw; 
+  max-width: 50vw; 
   justify-content: center;
   padding-top: 6vw;
 }
@@ -248,7 +217,7 @@ main{
   animation-timeline: view();
   animation-range-start: contain 10vh;
   animation-range-end: contain 30vh;
-  padding: 1vw 0 0 10vw;
+  padding: 1vw 0 0 7vw;
 
 }
 @keyframes scroll-reveal{
@@ -265,10 +234,10 @@ main{
   position: relative;
   top: -2rem;
   max-width: 60vw;
-  margin-right: 2rem; 
+  padding: 1vw 7vw 0 0; 
 }
 
-.test{
+.billeder-forside{
   margin: 0;
   padding: 0;
 }
@@ -297,12 +266,17 @@ main{
   background-image: url(/img/kode.png);
 }
 
-
+.stroke-absolut{
+  position: relative;
+  max-width: 100vw; 
+}
 .stroke-tekst{
+  position: absolute;
+  left: 20vw; 
+  top: 10vw; 
   color: transparent; 
   -webkit-text-stroke: 1px $blue; 
-  font-size: 5vw; 
-  text-align: center;
+  font-size: 4vw;
   margin-bottom: 10rem; 
   margin-top: 2rem;
 }
@@ -336,7 +310,7 @@ main{
  div img{
   object-fit: contain;
   aspect-ratio: 1/1.5;
-  background-color: #f9cdcd;
+  background-color: $pink-header;
  }
 }
 .zero-margin{ 
@@ -345,22 +319,10 @@ main{
 }
 /*------------Om os--------------*/
 .value-words{
-  margin: 10rem 0 15rem 0;
-  p{
-    max-width: 100vw; 
-    margin: 0 auto;
-    padding: 3rem 0;
-    font-size: 3rem;
-    text-align: center;
-    font-family: "MuseoModerno", sans-serif;
-  }
+  margin: 2rem 0 3rem 0;
 }
-.value-words p:nth-of-type(1){
-  color: $pink;
-}
-.value-words p:nth-of-type(2){
-  color: $blue; 
-}
+
+
 .mod-teamet{
   padding: 10rem 0;
 
@@ -579,6 +541,7 @@ main{
 .kontaktform{  
   @include form;
   max-width: 100vw; 
+  font-family: "Mukta", sans-serif;
 }
 form{
   padding: 2rem 0;
@@ -596,7 +559,7 @@ form{
 /*-----------Priser-----------*/
 .pris-boks{
   max-width: 60vw;
-  background-color: $pink-second;
+  background-color: $pink-header;
   border-radius: $border-radius/2;
   margin: 2rem auto;
   padding: 4rem;
