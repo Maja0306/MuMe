@@ -161,6 +161,14 @@ p {
   background-color: #FCD8D8;
 }
 
+.gif {
+  display: block;
+  margin: 0 auto;
+  max-width: 50vw;
+  justify-content: center;
+  padding-top: 6vw;
+}
+
 /*------------Header--------------*/
 header {
   display: grid;
@@ -276,14 +284,6 @@ main {
   flex-direction: column;
 }
 
-.gif {
-  display: block;
-  margin: 0 auto;
-  max-width: 50vw;
-  justify-content: center;
-  padding-top: 6vw;
-}
-
 .scroll-reveal {
   color: hsla(0, 0%, 0%, 0.109);
   max-width: 50vw;
@@ -327,7 +327,6 @@ main {
   background-size: cover;
   background-position: center;
   display: table;
-  background-attachment: fixed;
 }
 .box1 h2, .box2 h2, .box3 h2 {
   display: table-cell;
