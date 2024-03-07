@@ -47,6 +47,20 @@ $border-radius: 60px;
     color: white;
     font-family: "Mukta", sans-serif; 
   }
+  :hover{
+    animation: bottomsColor 100s ease alternate;
+  }
+}
+@keyframes bottomsColor{
+  0%{
+    background-color:  $blue;
+  }
+  1%{
+    background-color: #0d105e;
+  }
+  100%{
+    background-color: $blue;
+  }
 }
 
 /*-------------------Kontaktform------------------*/

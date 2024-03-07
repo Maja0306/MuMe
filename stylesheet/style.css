@@ -1,5 +1,16 @@
 @charset "UTF-8";
 /*-------------------Knap------------------*/
+@keyframes bottomsColor {
+  0% {
+    background-color: #373FF7;
+  }
+  1% {
+    background-color: #0d105e;
+  }
+  100% {
+    background-color: #373FF7;
+  }
+}
 /*-------------------Kontaktform------------------*/
 /*  input[id=postnummer], input[id=by]{ 
     border-radius: $border-radius;
@@ -48,6 +59,9 @@ html {
   border: none;
   color: white;
   font-family: "Mukta", sans-serif;
+}
+.knap :hover {
+  animation: bottomsColor 100s ease alternate;
 }
 
 input[type=submit] {
