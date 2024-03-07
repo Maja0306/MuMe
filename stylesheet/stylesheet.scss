@@ -242,7 +242,7 @@ main{
 }
 .box1, .box2, .box3{
   height: 65vh;
-  width: 100%;
+  width: 100vw;
   background-size: cover;
   background-position: center;
   display: table;
@@ -257,13 +257,13 @@ main{
 }
 
 .box1{
-  background: url(/img/sidste-forside.png);
+  background: url("../img/sidste-forside.png");
 }
 .box2{
-  background-image: url(/img/andet-forside.png);
+  background: url("../img/andet-forside.png");
 }
 .box3{
-  background-image: url(/img/kode.png);
+  background: url("../img/kode.png");
 }
 
 .stroke-absolut{
