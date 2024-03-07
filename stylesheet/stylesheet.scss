@@ -240,62 +240,30 @@ main{
   margin: 0;
   padding: 0;
 }
+.box1, .box2, .box3{
+  height: 65vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
+  h2{
+    display: table-cell;
+    vertical-align: middle;
+    color: $white;
+    background-color:rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px) brightness(0.5); 
+  }
+}
+
 .box1{
-  height: 65vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  display: table;
-  background-attachment: fixed;
-  h2{
-    display: table-cell;
-    vertical-align: middle;
-    color: $white;
-    background-color:rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px) brightness(0.5); 
-  }
-}
-.box2{
-  height: 65vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  display: table;
-  background-attachment: fixed;
-  h2{
-    display: table-cell;
-    vertical-align: middle;
-    color: $white;
-    background-color:rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px) brightness(0.5); 
-  }
-}
-.box3{
-  height: 65vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  display: table;
-  background-attachment: fixed;
-  h2{
-    display: table-cell;
-    vertical-align: middle;
-    color: $white;
-    background-color:rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px) brightness(0.5); 
-  }
-}
-.box1{
-  background-image: url(/img/sidste-forside.png);
-  background-color: white;
+  background: url(/img/sidste-forside.png);
 }
 .box2{
   background-image: url(/img/andet-forside.png);
-  background-color: white;
 }
 .box3{
   background-image: url(/img/kode.png);
-  background-color: white;
 }
 
 .stroke-absolut{
