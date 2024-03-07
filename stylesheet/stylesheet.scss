@@ -90,6 +90,13 @@ p{
 .second-bg{
   background-color: $second-bg-color;
 }
+.gif{
+  display: block;
+  margin: 0 auto;
+  max-width: 50vw; 
+  justify-content: center;
+  padding-top: 6vw;
+}
 
 /*------------Header--------------*/
 header{
@@ -199,13 +206,6 @@ main{
   display: flex;
   flex-direction: column; 
 }
-.gif{
-  display: block;
-  margin: 0 auto;
-  max-width: 50vw; 
-  justify-content: center;
-  padding-top: 6vw;
-}
 .scroll-reveal{
   color: hsla(0, 0%, 0%, 0.109); 
   max-width: 50vw;
@@ -218,7 +218,6 @@ main{
   animation-range-start: contain 10vh;
   animation-range-end: contain 30vh;
   padding: 1vw 0 0 7vw;
-
 }
 @keyframes scroll-reveal{
   to { 
@@ -253,7 +252,7 @@ main{
     vertical-align: middle;
     color: $white;
     background-color:rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px) brightness(0.5) contrast(80%);
+    backdrop-filter: blur(3px) brightness(0.5); 
   }
 }
 .box1{
