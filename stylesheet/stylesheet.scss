@@ -240,7 +240,37 @@ main{
   margin: 0;
   padding: 0;
 }
-.box1, .box2, .box3{
+.box1{
+  height: 65vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
+  h2{
+    display: table-cell;
+    vertical-align: middle;
+    color: $white;
+    background-color:rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px) brightness(0.5); 
+  }
+}
+.box2{
+  height: 65vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
+  h2{
+    display: table-cell;
+    vertical-align: middle;
+    color: $white;
+    background-color:rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px) brightness(0.5); 
+  }
+}
+.box3{
   height: 65vh;
   width: 100%;
   background-size: cover;
