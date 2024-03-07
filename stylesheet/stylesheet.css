@@ -334,6 +334,8 @@ main {
   vertical-align: middle;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(3px) brightness(0.5);
+          backdrop-filter: blur(3px) brightness(0.5);
 }
 
 .box1 {

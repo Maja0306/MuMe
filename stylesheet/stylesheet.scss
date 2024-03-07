@@ -252,6 +252,7 @@ main{
     vertical-align: middle;
     color: $white;
     background-color:rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px) brightness(0.5); 
   }
 }
 .box1{
